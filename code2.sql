@@ -128,12 +128,63 @@ SET DATA TYPE FLOAT;
 
 
 
-SELECT DATATYPE(salary) from employee ; 
-
 
 SELECT pg_typeof(salary)
 FROM employee
 LIMIT 1;
+
+
+
+
+
+select * from policyholders ;
+
+
+
+select min(age) as minimum , max(age) as maximam from policyholders ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- case expression 
+select policyholder_id , gender , annual_income , CASE
+	WHEN age >= 45 then '45 parr'
+	WHEN age >= 35 then '35 parr'
+	WHEN age >= 18 then 'Mature'
+	ELSE 'pata ni'
+END as age_category 
+FROM policyholders;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
