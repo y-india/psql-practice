@@ -191,7 +191,7 @@ in each order .
 
 
 
-final query 
+-- final query 
 SELECT 
     c.cust_name,
     c.id AS cust_id,
@@ -206,7 +206,6 @@ FROM customers c
 JOIN orders o ON c.id = o.cust_id
 JOIN products p ON c.id = p.cust_id
 ORDER BY c.id, o.ord_id, p.prod_id;
-
 
 
 
